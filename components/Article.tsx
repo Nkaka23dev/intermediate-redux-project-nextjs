@@ -1,21 +1,21 @@
 import Link from "next/link";
-import { BsArrowRight, BsArrowDown } from "react-icons/bs"; 
+import { BsArrowRight, BsArrowDown } from "react-icons/bs";
 
 
-export default function Article() {
+export default function Article({ title }: any) {
   return (
-    <div className="grid grid-cols-3 md:grid-cols-1 gap-24 items-start">
+    <div className="grid grid-cols-3 md:grid-cols-1 mt-32 gap-24 items-start">
       {/* All articles */}
       <div className="col-span-full">
         <h1 className="text-2xl flex items-center gap-3  font-bold tracking-wide uppercase  static top-3">
-          All Articles
+          {title}
           <BsArrowDown className="text-lg" />
         </h1>
 
         <div className="grid grid-cols-3 gap-7 md:grid-cols-1 mt-10">
-          {[1,2,3,4,5,6,7,8,9,10].map((article, indx) => {
+          {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((article, indx) => {
             return (
-              <Link  key={indx} href={`blog/${indx}`}>
+              <Link key={indx} href="details">
                 <div
                   className="shadow-xl hover:shadow-2xl items-start content-start flex justify-between flex-col h-full cursor-pointer"
                 >
