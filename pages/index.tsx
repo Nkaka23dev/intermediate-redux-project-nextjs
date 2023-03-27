@@ -1,12 +1,10 @@
 import Head from 'next/head'
-import { Inter } from 'next/font/google'
-import Navbar from '@/components/Navbar'
 import Articles from '@/components/Articles'
+import Posts from '../components/Posts'
+import { getStaticProps } from './data'
 
-
-const inter = Inter({ subsets: ['latin'] })
-
-export default function Home() {
+export default function Home({ myPosts }: any) {
+  console.log(myPosts)
   return (
     <>
       <Head>
@@ -17,7 +15,9 @@ export default function Home() {
       </Head>
       <main className=''>
         <Articles />
+        <Posts myPosts={myPosts} />
       </main>
     </>
   )
 }
+export { getStaticProps };
