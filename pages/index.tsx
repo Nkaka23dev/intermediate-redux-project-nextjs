@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import Articles from '@/components/Articles'
-import { getStaticProps } from './data'
+import { getStaticProps } from '../data'
 
 export default function Home({ myPosts }: any) {
   return (
