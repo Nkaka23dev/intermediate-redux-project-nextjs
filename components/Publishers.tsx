@@ -10,7 +10,7 @@ export default function Publishers() {
             <div className="grid grid-cols-4 md:grid-cols-1">
                 {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 1, 4, 15, 16, 17, 18, 19, 20].map((article, idx) => {
                     return (
-                        <Link href="pubdetails" key={idx}>
+                        <Link href="details" key={idx}>
                             <div key={idx} className="flex hover:underline cursor-pointer  py-2 justify-between items-center">
                                 <h1 className="capitalize text-lg text-gray-600 flex items-center gap-1">
                                     <GrArticle />
