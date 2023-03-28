@@ -1,10 +1,8 @@
 import Head from 'next/head'
 import Articles from '@/components/Articles'
-import Posts from '../components/Posts'
 import { getStaticProps } from './data'
 
 export default function Home({ myPosts }: any) {
-  console.log(myPosts)
   return (
     <>
       <Head>
@@ -14,8 +12,7 @@ export default function Home({ myPosts }: any) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className=''>
-        <Articles />
-        <Posts myPosts={myPosts} />
+        <Articles myPosts={myPosts}  />
       </main>
     </>
   )
